@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructora JSM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <header class="header text-white text-center">
+        <h1>constructora JSM</h1>
+    </header>
+
+    <section id="proposito" class="container py-4">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Propósito de la Página ☝️</h2>
+                <p>¡Bienvenido al portal de gestión de personal de Construcciones JSM! Simplificamos tu experiencia laboral con herramientas intuitivas y eficientes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="usuarios" class="container py-4">
+        <h2>Listado de Usuarios</h2>
+        <div id="usuarios-grid" class="row">
+        </div>
+    </section>
+
+    <section id="registro" class="container py-4">
+        <h2>Formulario de Registro 📝</h2>
+        <form id="formRegistro">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" class="form-control" id="apellido" name="apellido" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" class="form-control" id="email" name="email" required placeholder="ejemplo@gmail.com">
+            </div>
+
+            <div class="form-group">
+                <label for="cargo">Cargo:</label>
+                <select class="form-control" id="cargo" name="cargo" required>
+                    <option value="">Selecciona un cargo</option>
+                    <option value="gerente">Gerente</option>
+                    <option value="arquitecto">Arquitecto</option>
+                    <option value="ingeniero">Ingeniero</option>
+                    <option value="operario">Operario</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_ingreso">Fecha de Ingreso:</label>
+                <input type="date" class="form-control" id="fecha_ingreso" name="fecha_ingreso" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary mr-2">Registrar</button>
+                <button type="button" class="btn btn-secondary" id="limpiarFormulario">Limpiar</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Modal de Confirmación -->
+    <div class="modal fade" id="modal-confirmacion" tabindex="-1" role="dialog" aria-labelledby="modal-confirmacion-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-confirmacion-label">Confirmar Registro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Estás seguro de agregar este usuario?</p>
+                    <ul id="datos-confirmacion">
+                        <!-- Aquí se llenarán dinámicamente los datos de confirmación -->
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="confirmar-agregar">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 constructora JSM hecho con ❤️</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
